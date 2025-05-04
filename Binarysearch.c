@@ -33,7 +33,7 @@ int binary_Search(int *ptr, int size)
     int LOW = 0;
     int HIGH = size - 1;
     int mid = (LOW + HIGH) / 2;
-    while (LOW < HIGH)
+    while (LOW <= HIGH)
     {
         int mid = (LOW + HIGH) / 2;
         if (ptr[mid] == search_ele)
@@ -42,12 +42,12 @@ int binary_Search(int *ptr, int size)
         }
         else if (ptr[mid] < search_ele)
         {
-            return LOW = mid + 1;
+            LOW = mid + 1;
         }
         else
         {
-            return HIGH = mid - 1;
-        };
+            HIGH = mid - 1;
+        }
     }
 }
 int main()
