@@ -31,7 +31,7 @@ void insertion_sort(int *p, int size)
             p[j + 1] = p[j];
             j--;
         }
-        p[j] = temp;
+        p[j + 1] = temp;
     }
 }
 void Binary_Search(int *p, int size)
