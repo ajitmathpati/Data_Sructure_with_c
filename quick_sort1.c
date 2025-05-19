@@ -31,9 +31,12 @@ int partition(int *ptr, int lb, int ub)
     int pivot = ptr[lb];
     int start = lb;
     int end = ub;
-    while (ptr[start] <= pivot && start < end)
+    while (start < end)
     {
-        start++;
+        while (ptr[start] <= pivot && start < end)
+        {
+            start++;
+        }
         while (ptr[end] > pivot)
         {
             end--;
